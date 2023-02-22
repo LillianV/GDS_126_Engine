@@ -274,6 +274,8 @@ gameStates[`level1`] = function()
 
 	//renders the midground
 	bg.drawStaticImage([0,0]);
+	bg.drawStaticImage([-rbg.width,0]);
+	bg.drawStaticImage([rbg.width,0]);
 	
 	//alternate methd for rendering the repeating background
 	//rbg.render(`drawStaticImage`, [0,0])
