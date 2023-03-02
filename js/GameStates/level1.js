@@ -101,6 +101,7 @@ gameStates[`level1`] = function()
 	if(!keys[`W`] && !keys[`S`] && !keys[`D`] && !keys[`A`] && !keys[` `] && canShoot && wiz.canJump)
 	{
 		wiz.changeState(`idle`)
+		sounds["step"].muted=true;
 	}
 	
 	
@@ -108,6 +109,7 @@ gameStates[`level1`] = function()
 	{
 		wiz.top={x:0,y:0};
 		wiz.changeState(`crouch`)
+		sounds["step"].muted=true;
 	}
 	else
 	{
@@ -117,10 +119,12 @@ gameStates[`level1`] = function()
 	if(keys[`D`]  )
 	{
 		wiz.dir=1;
+		sounds["step"].muted=false;
 		if(wiz.currentState != `crouch`) 
 		{
 			if(wiz.canJump)wiz.changeState(`walk`)
 			wiz.vx += wiz.force
+			
 			
 		}
 		
@@ -128,10 +132,12 @@ gameStates[`level1`] = function()
 	if(keys[`A`] )
 	{
 		wiz.dir=-1;
+		sounds["step"].muted=false;
 		if(wiz.currentState != `crouch` ) 
 		{
 			if(wiz.canJump)wiz.changeState(`walk`)
 			wiz.vx += -wiz.force
+			
 		}
 		
 	}
@@ -140,7 +146,8 @@ gameStates[`level1`] = function()
 		wiz.canJump = false;
 		wiz.vy = wiz.jumpHeight;
 		wiz.changeState(`jump`)
-		//sounds.play(`splode`,1)
+		sounds.play(`jump`,0);
+		sounds["step"].muted=true;
 	}
 	shotTimer--;
 	if(shotTimer <=0)
@@ -158,6 +165,7 @@ gameStates[`level1`] = function()
 		{
 			wiz.changeState(`attack`)
 			shotTimer = shotDelay
+			sounds.play(`gunshot`,0);
 			//console.log(`Boom`)
 
 			bullets[currentBullet].vx = 5*wiz.dir;

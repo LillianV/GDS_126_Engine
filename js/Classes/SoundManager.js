@@ -7,7 +7,7 @@ class SoundManager
              this[_soundNodes[i].getAttribute(`name`)]=_soundNodes[i]
         }
     }
-    play(_sound, _start=0, _loop=false)
+    play(_sound, _start=this[_sound].currentTime, _loop=false)
     {
         try
         {
