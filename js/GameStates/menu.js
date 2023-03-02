@@ -22,7 +22,7 @@ gameStates[`menu`] =function(){
 		{
 			//Changes to the game state
 			gameStates.changeState(`level1`)
-			sounds.play('bgm',0);
+			sounds.play('bgm',0,true);
 			sounds.play('step',0,true);
 		}
 
