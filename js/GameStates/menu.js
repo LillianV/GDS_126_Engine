@@ -3,7 +3,7 @@ This file contains all of the code for the Main Menu
 ----------------------------------*/
 
 var startButton = new GameObject({width:200});
-//startButton.img.src="images/mrt.jpg"
+startButton.img.src="images/Button.png"
 startButton.hitBoxWidth=800
 console.log(startButton.collisionPoints.right)
 
