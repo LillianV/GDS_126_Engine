@@ -11,7 +11,6 @@ var buttonData ={
 			frames:
 			[
 				{width:443, height:101, startX:0, startY:0},
-				{width:443, height:101, startX:443, startY:0}
 				
 			]
 		},
@@ -21,7 +20,7 @@ var buttonData ={
 			cycle:true,
 			frames:
 			[
-				{width:443, height:101, startX:443, startY:0}
+				{width:443, height:101, startX:444, startY:0}
 				
 			]
 		}
