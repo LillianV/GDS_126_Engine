@@ -18,7 +18,7 @@ var buttonData ={
         hover:
 		{
 			fps:15,
-			cycle:false,
+			cycle:true,
 			frames:
 			[
 				{width:443, height:101, startX:443, startY:0}
