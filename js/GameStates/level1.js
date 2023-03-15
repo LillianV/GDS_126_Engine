@@ -291,7 +291,7 @@ gameStates[`level1`] = function()
 
 	//renders the objects in the rect group
 	rects.render(`drawRect`, [0,0,100,100])
-	plat.drawStaticImage([-plat.width, -plat.height/2,400,200])
+	plat.drawStaticImage([-plat.width, -plat.height/2,400,200]);
 	
 	/*----Used for debugging----*/
 	/*context.beginPath()
